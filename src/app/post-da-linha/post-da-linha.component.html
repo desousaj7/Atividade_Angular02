@@ -1,3 +1,14 @@
-<p>
-  post-da-linha works!
-</p>
+
+<div class="container col-6">
+  <div class="row">
+      <div class="container alert alert-primary p-2">
+          <p>Name: {{post.name}} </p> 
+          <p>Text: {{post.text}} </p> 
+          <div class="row-2">
+                <p>Likes: {{post.likes}} </p>
+                <button class="btn btn-primary" (click)="like()">like
+                </button>
+          </div>
+        </div>
+  </div>
+</div>

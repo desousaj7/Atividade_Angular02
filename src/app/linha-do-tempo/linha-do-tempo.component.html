@@ -1,12 +1,18 @@
-<div class="container">
+<div class="container col-7">
+    <h4>Seu perfil</h4>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Nome</span>
         </div>
-        <input type="text" class="form-control" placeholder="Seu nome, jovem" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Seu nome, jovem" #nameInput value={{nome}}>
       </div>
       <div class="input-group">
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" #textInput value={{text}}></textarea>
       </div>
-      <button class="btn btn-outline-secondary" type="button">Button</button>
+      <button class="btn btn-outline-primary" type="button" (click)="salvar(nameInput.value, textInput.value)">Enviar</button>
+
+        <div *ngFor="let p of myPosts">
+            <post-da-linha [post]="p"></post-da-linha>
+        </div>
+ 
 </div>

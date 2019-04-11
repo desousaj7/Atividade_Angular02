@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'post-da-linha',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostDaLinhaComponent implements OnInit {
 
-  constructor() { }
+  @Input() post:any
 
+  like(){
+    this.post.likes++
+  }
   ngOnInit() {
+    
   }
 
 }
